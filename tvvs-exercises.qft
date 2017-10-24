@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE RootStep>
+<RootStep id="_0" name="root"
+          signature="F4D0B020730368764BEC9809E9A793D87DA695D6"
+          version="4.1.5">
+  <include>qfs.qft</include>
+  <TestSet id="_1" name="unnamed">
+    <TestCase id="_2" name="unnamed"/>
+  </TestSet>
+  <PackageRoot id="_3"/>
+  <ExtraSequence id="_4">
+    <SetupSequence id="_6" name="Start Java application in a Jar archive">
+      <SetGlobalStep id="_7" varname="client">
+        <default>Calculator</default>
+      </SetGlobalStep>
+      <JavaClientStarter client="$(client)" directory="/home/pedro/Desktop"
+                         executable="${qftest:java}" id="_8">
+        <parameter>-jar</parameter>
+        <parameter>/home/pedro/Desktop/tvvs.jar</parameter>
+      </JavaClientStarter>
+      <ClientWaiter client="$(client)" id="_9"/>
+    </SetupSequence>
+    <BasicSequence id="_R" name="Addition &amp; Substraction Test">
+      <MouseEventStep clicks="1" client="$(client)" component="6"
+                      event="MOUSE_MPRC" id="_S" modifiers="16"/>
+      <MouseEventStep clicks="1" client="$(client)" component="+"
+                      event="MOUSE_MPRC" id="_T" modifiers="16"/>
+      <MouseEventStep clicks="1" client="$(client)" component="5"
+                      event="MOUSE_MPRC" id="_U" modifiers="16"/>
+      <MouseEventStep clicks="1" client="$(client)" component="-"
+                      event="MOUSE_MPRC" id="_V" modifiers="16"/>
+      <MouseEventStep clicks="1" client="$(client)" component="4"
+                      event="MOUSE_MPRC" id="_W" modifiers="16"/>
+      <MouseEventStep clicks="1" client="$(client)" component="."
+                      event="MOUSE_MPRC" id="_X" modifiers="16"/>
+      <CheckStringStep client="$(client)" component="screen" id="_Y">
+        <text>1</text>
+      </CheckStringStep>
+      <WindowEventStep client="$(client)" component="frameCalculator"
+                       event="WINDOW_CLOSING" id="_Z"/>
+    </BasicSequence>
+    <BasicSequence id="_c" name="Mistery Operation Test">
+      <MouseEventStep clicks="1" client="$(client)" component="1"
+                      event="MOUSE_MPRC" id="_d" modifiers="16"/>
+      <MouseEventStep clicks="1" client="$(client)" component="5"
+                      event="MOUSE_MPRC" id="_e" modifiers="16"/>
+      <MouseEventStep clicks="1" client="$(client)" component="???"
+                      event="MOUSE_MPRC" id="_f" modifiers="16"/>
+      <MouseEventStep clicks="1" client="$(client)" component="5"
+                      event="MOUSE_MPRC" id="_g" modifiers="16"/>
+      <MouseEventStep clicks="1" client="$(client)" component="1"
+                      event="MOUSE_MPRC" id="_h" modifiers="16"/>
+      <MouseEventStep clicks="1" client="$(client)" component="."
+                      event="MOUSE_MPRC" id="_i" modifiers="16"/>
+      <CheckStringStep client="$(client)" component="screen" id="_j">
+        <text>765</text>
+      </CheckStringStep>
+      <WindowEventStep client="$(client)" component="frameCalculator"
+                       event="WINDOW_CLOSING" id="_k"/>
+    </BasicSequence>
+  </ExtraSequence>
+  <WindowList id="_5">
+    <WindowStep class="Window" feature="Calculator" height="330"
+                id="frameCalculator" uid="_A" width="196" x="821" y="146">
+      <extrafeature name="qfs:class" negate="false" regexp="false" state="0">javax.swing.JFrame</extrafeature>
+      <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                    state="0">Window</extrafeature>
+      <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                    state="0">javax.swing.JFrame</extrafeature>
+      <ComponentStep class="Button" classcount="15" classindex="7" feature="8"
+                     height="25" id="8" name="8" uid="_B" width="42" x="47"
+                     y="165">
+        <extrafeature name="qfs:class" negate="false" regexp="false"
+                      state="0">javax.swing.JButton</extrafeature>
+        <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                      state="0">Button</extrafeature>
+        <extrafeature name="qfs:label" negate="false" regexp="false"
+                      state="1">8</extrafeature>
+        <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                      state="0">javax.swing.JButton</extrafeature>
+      </ComponentStep>
+      <ComponentStep class="Button" classcount="15" classindex="10"
+                     feature="+" height="25" id="+" name="+" uid="_C"
+                     width="55" x="136" y="115">
+        <extrafeature name="qfs:class" negate="false" regexp="false"
+                      state="0">javax.swing.JButton</extrafeature>
+        <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                      state="0">Button</extrafeature>
+        <extrafeature name="qfs:label" negate="false" regexp="false"
+                      state="1">+</extrafeature>
+        <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                      state="0">javax.swing.JButton</extrafeature>
+      </ComponentStep>
+      <ComponentStep class="Button" classcount="15" classindex="5" feature="6"
+                     height="25" id="6" name="6" uid="_D" width="42" x="89"
+                     y="140">
+        <extrafeature name="qfs:class" negate="false" regexp="false"
+                      state="0">javax.swing.JButton</extrafeature>
+        <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                      state="0">Button</extrafeature>
+        <extrafeature name="qfs:label" negate="false" regexp="false"
+                      state="1">6</extrafeature>
+        <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                      state="0">javax.swing.JButton</extrafeature>
+      </ComponentStep>
+      <ComponentStep class="Button" classcount="15" classindex="11"
+                     feature="-" height="25" id="-" name="-" uid="_E"
+                     width="55" x="136" y="140">
+        <extrafeature name="qfs:class" negate="false" regexp="false"
+                      state="0">javax.swing.JButton</extrafeature>
+        <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                      state="0">Button</extrafeature>
+        <extrafeature name="qfs:label" negate="false" regexp="false"
+                      state="1">-</extrafeature>
+        <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                      state="0">javax.swing.JButton</extrafeature>
+      </ComponentStep>
+      <ComponentStep class="Button" classcount="15" classindex="4" feature="5"
+                     height="25" id="5" name="5" uid="_F" width="42" x="47"
+                     y="140">
+        <extrafeature name="qfs:class" negate="false" regexp="false"
+                      state="0">javax.swing.JButton</extrafeature>
+        <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                      state="0">Button</extrafeature>
+        <extrafeature name="qfs:label" negate="false" regexp="false"
+                      state="1">5</extrafeature>
+        <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                      state="0">javax.swing.JButton</extrafeature>
+      </ComponentStep>
+      <ComponentStep class="Button" classcount="15" classindex="14"
+                     feature="=" height="25" id="." name="=" uid="_G"
+                     width="44" x="76" y="225">
+        <extrafeature name="qfs:class" negate="false" regexp="false"
+                      state="0">javax.swing.JButton</extrafeature>
+        <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                      state="0">Button</extrafeature>
+        <extrafeature name="qfs:label" negate="false" regexp="false"
+                      state="1">=</extrafeature>
+        <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                      state="0">javax.swing.JButton</extrafeature>
+      </ComponentStep>
+      <ComponentStep class="TextField" classcount="1" classindex="0"
+                     height="110" id="screen" name="screen" uid="_H"
+                     width="196" x="0" y="0">
+        <extrafeature name="qfs:class" negate="false" regexp="false"
+                      state="0">javax.swing.JTextField</extrafeature>
+        <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                      state="0">TextField</extrafeature>
+        <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                      state="0">javax.swing.JTextField</extrafeature>
+      </ComponentStep>
+      <ComponentStep class="Button" classcount="15" classindex="3" feature="4"
+                     height="25" id="4" name="4" uid="_Q" width="42" x="5"
+                     y="140">
+        <extrafeature name="qfs:class" negate="false" regexp="false"
+                      state="0">javax.swing.JButton</extrafeature>
+        <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                      state="0">Button</extrafeature>
+        <extrafeature name="qfs:label" negate="false" regexp="false"
+                      state="1">4</extrafeature>
+        <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                      state="0">javax.swing.JButton</extrafeature>
+      </ComponentStep>
+      <ComponentStep class="Button" classcount="15" classindex="0" feature="1"
+                     height="25" id="1" name="1" uid="_a" width="42" x="5"
+                     y="115">
+        <extrafeature name="qfs:class" negate="false" regexp="false"
+                      state="0">javax.swing.JButton</extrafeature>
+        <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                      state="0">Button</extrafeature>
+        <extrafeature name="qfs:label" negate="false" regexp="false"
+                      state="1">1</extrafeature>
+        <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                      state="0">javax.swing.JButton</extrafeature>
+      </ComponentStep>
+      <ComponentStep class="Button" classcount="15" classindex="12"
+                     feature="???" height="25" id="???" name="???" uid="_b"
+                     width="55" x="136" y="165">
+        <extrafeature name="qfs:class" negate="false" regexp="false"
+                      state="0">javax.swing.JButton</extrafeature>
+        <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                      state="0">Button</extrafeature>
+        <extrafeature name="qfs:label" negate="false" regexp="false"
+                      state="1">???</extrafeature>
+        <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                      state="0">javax.swing.JButton</extrafeature>
+      </ComponentStep>
+    </WindowStep>
+  </WindowList>
+</RootStep>

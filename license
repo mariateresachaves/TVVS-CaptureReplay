@@ -1,0 +1,10 @@
+product = qftest
+name = Rui Osorio
+company = FEUP
+type = Automatic
+versions = -4.1
+expires = 2017-11-20
+concurrent = 1
+replaces = 
+key = 95930990097D1021
+signature = 302E0215009DE6EB73F4935810CE1BD81DE245CA12C917E7D90215009857573D08D0B8393EB6D771BD1FA8F95D089646
